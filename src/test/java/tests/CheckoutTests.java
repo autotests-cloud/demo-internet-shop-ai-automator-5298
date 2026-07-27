@@ -23,6 +23,7 @@ public class CheckoutTests extends TestBase {
 
     @Test
     @AllureId("47317")
+    @Tag("smoke")
     @Tag("negative")
     @DisplayName("Неуспешный логин с неверным паролем")
     void wrongPasswordLoginTest() {
@@ -44,8 +45,9 @@ public class CheckoutTests extends TestBase {
 
     @Test
     @AllureId("47318")
+    @Tag("smoke")
     @Tag("positive")
-    @DisplayName("Успешная авторизация (checkout demo)")
+    @DisplayName("Успешная авторизация через login.html")
     void successfulAuthorizationTest() {
         step("Открыть login.html?ru", () ->
                 open("login.html?ru"));
