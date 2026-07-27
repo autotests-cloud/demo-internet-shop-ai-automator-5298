@@ -1,0 +1,12 @@
+Full Name,Name,Status,Duration,Error,Stack Trace,Steps,Parent Suite,Suite,Sub Suite,Epic,Feature,Story
+"tests.LoginTests.wrongPasswordLoginTest","Неуспешный логин с неверным паролем","passed","10s 55ms",,,"Открыть login.html?ru passed (3s 842ms)
+  $(""open"") https://qa-guru.github.io/one-page-form/login.html?ru passed (3s 836ms)
+    $(""webdriver"") create() passed (3s 371ms)
+ Ввести user1 в поле логина passed (1s 679ms)
+   $(""[data-testid=login-input]"") set value(user1) passed (1s 658ms)
+  Ввести неверный пароль в поле пароля passed (1s 333ms)
+    $(""[data-testid=password-input]"") set value(wrongpassword) passed (1s 333ms)
+   Нажать кнопку submit passed (936ms)
+     $(""[data-testid=submit-button]"") click() passed (936ms)
+    Проверить текст ошибки ""Неверный логин или пароль"" passed (621ms)
+      $(""[data-testid=error-message]"") should have(text ""Неверный логин или пароль"") passed (619ms)",,"Авторизация",,"Одностраничная форма","Авторизация",
