@@ -89,4 +89,27 @@ public class LoginTests extends TestBase {
         step("Проверить текст ошибки \"Неверный логин или пароль\"", () ->
                 $("[data-testid=error-message]").shouldHave(text("Неверный логин или пароль")));
     }
+
+
+    @Test
+    @AllureId("47325")
+    @Tag("smoke")
+    @Tag("positive")
+    @DisplayName("Демо: успешный логин (ручной триггер AI)")
+    void successfulLoginTest47325() {
+        step("Открыть login.html?ru", () ->
+                open("login.html?ru"));
+
+        step("Ввести user1 в поле логина", () ->
+                $("[data-testid=login-input]").setValue("user1"));
+
+        step("Ввести password1 в поле пароля", () ->
+                $("[data-testid=password-input]").setValue("password1"));
+
+        step("Нажать кнопку submit", () ->
+                $("[data-testid=submit-button]").click());
+
+        step("Проверить приветствие \"Добро пожаловать, user1!\"", () ->
+                $("[data-testid=welcome-message]").shouldHave(text("Добро пожаловать, user1!")));
+    }
 }
