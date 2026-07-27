@@ -158,4 +158,27 @@ public class LoginTests extends TestBase {
         step("Проверить текст ошибки \"Неверный логин или пароль\"", () ->
                 $("[data-testid=error-message]").shouldHave(text("Неверный логин или пароль")));
     }
+
+
+    @Test
+    @AllureId("47328")
+    @Tag("smoke")
+    @Tag("negative")
+    @DisplayName("Неуспешный логин с неверным паролем")
+    void wrongPasswordLoginTest47328() {
+        step("Открыть login.html?ru", () ->
+                open("login.html?ru"));
+
+        step("Ввести user1 в поле логина", () ->
+                $("[data-testid=login-input]").setValue("user1"));
+
+        step("Ввести неверный пароль в поле пароля", () ->
+                $("[data-testid=password-input]").setValue("wrongpassword"));
+
+        step("Нажать кнопку submit", () ->
+                $("[data-testid=submit-button]").click());
+
+        step("Проверить текст ошибки \"Неверный логин или пароль\"", () ->
+                $("[data-testid=error-message]").shouldHave(text("Неверный логин или пароль")));
+    }
 }
