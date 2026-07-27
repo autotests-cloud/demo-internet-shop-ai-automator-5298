@@ -1,0 +1,17 @@
+Full Name,Name,Status,Duration,Error,Stack Trace,Steps,Parent Suite,Suite,Sub Suite,Epic,Feature,Story
+"tests.CheckoutTests.wrongPasswordLoginTest","Неуспешный логин с неверным паролем","passed","10s 974ms",,,"Открыть login.html?ru passed (4s 163ms)
+ Ввести user1 в поле логина passed (1s 891ms)
+  Ввести неверный пароль в поле пароля passed (1s 563ms)
+   Нажать кнопку submit passed (1s 32ms)
+    Проверить текст ошибки ""Неверный логин или пароль"" passed (747ms)",,"Авторизация",,"Одностраничная форма","Авторизация",
+"tests.CheckoutTests.successfulAuthorizationTest","Успешная авторизация через login.html","passed","11s 528ms",,,"Открыть login.html?ru passed (4s 609ms)
+  $(""open"") https://qa-guru.github.io/one-page-form/login.html?ru passed (4s 602ms)
+    $(""webdriver"") create() passed (3s 743ms)
+ Ввести user1 в поле логина passed (1s 896ms)
+   $(""[data-testid=login-input]"") set value(user1) passed (1s 872ms)
+  Ввести password1 в поле пароля passed (1s 555ms)
+    $(""[data-testid=password-input]"") set value(password1) passed (1s 555ms)
+   Нажать кнопку submit passed (1s 30ms)
+     $(""[data-testid=submit-button]"") click() passed (1s 30ms)
+    Проверить приветствие ""Добро пожаловать, user1!"" passed (756ms)
+      $(""[data-testid=welcome-message]"") should have(text ""Добро пожаловать, user1!"") passed (754ms)",,"Авторизация",,"Одностраничная форма","Авторизация",
